@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <h1>Clientes</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Email</td>
+      <td>Phone</td>
+      <td>Model</td>
+      <td>Serial Number</td>
+      <td>Purchase Price</td>
+      <td>Purchase Date</td>
+      <td>Contact</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>
+        {{ cliente.id }}
+      </td>
+
+      <td>
+        <a [routerLink]="['/admin/view/', cliente.id]">
+          {{ cliente.name }}
+        </a>
+      </td>
+
+      <td>{{ cliente.email }}</td>
+      <td>{{ cliente.phone }}</td>
+      <td>{{ cliente.model }}</td>
+      <td>{{ cliente.serialNumber }}</td>
+      <td>{{ cliente.purchasePrice }}</td>
+      <td>{{ cliente.purchaseDate }}</td>
+      <td>{{ cliente.contact }}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

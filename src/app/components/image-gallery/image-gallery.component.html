@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="image__container" *ngFor="let bike of bikes_row1">
+    <img class="image__img" src="{{ bike.img_url }}" />
+    <a href="#" [routerLink]="['/gallery/', bike.id]">
+      <div class="image__overlay">
+        <div class="image__title">{{bike.name}}</div>
+      </div>
+    </a>
+  </div>
+
+  <div class="image__container" *ngFor="let bike of bikes_row2">
+    <img class="image__img" src="{{ bike.img_url }}" />
+    <a href="#" [routerLink]="['/gallery/', bike.id]">
+      <div class="image__overlay">
+        <div class="image__title">{{bike.name}}</div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+
+
+
+ 
